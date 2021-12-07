@@ -1,28 +1,28 @@
-let gif;
+let gif;//declare image variable
 
 function preload (){
-gif = loadImage ('gif/AiBG.gif');
+gif = loadImage ('gif/AiBG2.gif');
 }
-function setup() {
-  createCanvas(windowWidth, windowWidth);
-  strokeWeight(1);
-  stroke(236,236,236);
+
+function setup() { //runs once
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-translate (0, 0);
+background ("white");
+translate (2, 2);
 
-var num = 3; //variable for the number of squares in the array
+var num = 4; //variable for the number of squares in the grid
 var sideLen = windowWidth/num; //variable for the side length of each square
 
-  for (var y = 0; y < windowHeight; y = y + sideLen) {//loop to create rows in the y direction
-
-
-  for (var x = 0; x < windowWidth; x = x + sideLen) {// loop to create a row of squares in the x direction
+  for (var y = 0; y < windowHeight + 100; y = y + sideLen) {//loop to create rows in the y direction
+     for (var x = 0; x < windowWidth + 100; x = x + sideLen) {// loop to create a row of squares in the x direction0
 image (gif, x, y);
   }
+  }
+
 }
 
-  noLoop ();
-
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
