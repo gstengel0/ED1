@@ -1,7 +1,7 @@
 let gif;//declare image variable
 
 function preload (){
-gif = loadImage ('gif/AiBG2.gif');
+gif = loadImage ('AiBG2.gif');
 }
 
 function setup() { //runs once
